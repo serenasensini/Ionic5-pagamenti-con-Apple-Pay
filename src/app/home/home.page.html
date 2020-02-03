@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Apple Pay Starter
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="main-div">
+  <div padding-top>
+    <ion-list-header margin-top color="primary">Riepilogo</ion-list-header>
+
+    <ion-list>
+      <ion-list-header>Prodotti</ion-list-header>
+      <ion-item>
+        <ion-label>{{prodotti[0].label}}</ion-label>
+        <ion-label slot="end">{{monetaCorrente}} {{prodotti[0].amount}}</ion-label>
+      </ion-item>
+      <ion-list-header>Tipo di spedizione</ion-list-header>
+      <ion-item>
+        <ion-label>{{prodotti[1].label}}</ion-label>
+        <ion-label slot="end">{{monetaCorrente}} {{prodotti[1].amount}}</ion-label>
+      </ion-item>
+      <ion-list-header>Totale</ion-list-header>
+      <ion-item>
+        <ion-text>17.98</ion-text>
+      </ion-item>
+    </ion-list>
+
+    <ion-row padding-horizontal margin-top>
+      <ion-col class="bold">
+        Tipo di spedizione
+      </ion-col>
+      <ion-col>
+        Spedizione
+      </ion-col>
+    </ion-row>
+    <ion-row padding-horizontal margin-top>
+      <ion-col class="bold">
+        Paese
+      </ion-col>
+      <ion-col>
+        Italia
+      </ion-col>
+    </ion-row>
+    <ion-row padding-horizontal margin-top>
+      <ion-col class="bold">
+        Produttore
+      </ion-col>
+      <ion-col>
+        Test
+      </ion-col>
+    </ion-row>
+    <ion-row padding-horizontal margin-top>
+      <ion-col class="bold">
+        E-mail
+      </ion-col>
+      <ion-col>
+        test@test.com
+      </ion-col>
+    </ion-row>
+    <ion-row padding-horizontal margin-vertical>
+      <ion-col class="bold">
+        Telefono
+      </ion-col>
+      <ion-col>
+        123456789
+      </ion-col>
+    </ion-row>
+    <ion-button padding-horizontal color="secondary" expand="full" (click)="verificaValidita()">Verifica Apple Pay
+    </ion-button>
+    <ion-button padding-horizontal color="primary" expand="full" (click)="effettuaPagamento()">Paga con Apple Pay
+    </ion-button>
+
+  </div>
+</ion-content>
